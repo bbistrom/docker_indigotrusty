@@ -14,10 +14,11 @@ popd > /dev/null
 set -e
 
 # Run the container with shared X11
-nvidia-docker run\
+nvidia-docker run --privileged \
   --net=host\
   --env "DISPLAY" \
   --env="QT_X11_NO_MITSHM=1" \
+   -v /dev/video0:/dev/video0 \
   -e SHELL\
   -e DOCKER=1\
   -v "$HOME:$HOME:rw"\
