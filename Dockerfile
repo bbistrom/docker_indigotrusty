@@ -40,6 +40,9 @@ RUN apt-get install -y ros-indigo-desktop-full
 # Additional development tools
 RUN apt-get install -y x11-apps python-pip build-essential
 RUN pip install catkin_tools
+RUN apt-get install cmake-qt-gui
+RUN sudo apt-get install software-properties-common python-software-properties
+
 
 # Make SSH available
 EXPOSE 22

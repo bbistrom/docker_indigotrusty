@@ -18,7 +18,7 @@ nvidia-docker run --privileged \
   --net=host\
   --env "DISPLAY" \
   --env="QT_X11_NO_MITSHM=1" \
-   -v /dev/video0:/dev/video0 \
+  -v /dev/video0:/dev/video0 \
   -e SHELL\
   -e DOCKER=1\
   -v "$HOME:$HOME:rw"\
